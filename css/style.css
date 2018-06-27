@@ -2,9 +2,9 @@ html, body {
   font-size: 16px;
 }
 
-header, nav, div, ul, li, h1, h2, span {
+/* header, nav, div, ul, li, h1, h2, span {
   border: 1px solid blue;
-}
+} */
 
 .container {
   max-width: 960px;
@@ -16,18 +16,37 @@ body {
   color: #616161;
 }
 
-h1, h2 {
+p, h1, h2, h3 {
   color: #474747;
+  margin: 1rem 0;
 }
 
 h1 {
-  font-weight: 900;
+  font-weight: 700;
   font-size: 2rem;
 }
 
 h2 {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.jumbo-left {
+  width: 60%;
+  overflow: hidden;
+  margin: 2rem 1.5rem;
+}
+
+.jumbo-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 35%
 }
 
 /* Header */
@@ -53,7 +72,8 @@ header {
 }
 
 .logo strong {
-  font-weight: bold;
+  font-weight: 600;
+  color: #424242;
 }
 
 ul {
@@ -67,27 +87,33 @@ header ul li {
 
 /* Banner Section */
 
-.banner {
+.jumbo-1 {
   background-color: #E5E5E5;
   display: flex;
 }
 
-.banner .image {
-  width: 60%;
-  overflow: hidden;
-  margin: 2rem 1.5rem;
-  flex-shrink: 0;
-}
-
-.image img {
+.jumbo-left img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-.banner-text {
+.button {
+  color: #FFF;
+  background-color: #474747;
+  text-align: center;
+  width: 15rem;
+  padding: 0.5rem 0;
+  margin-top: 1rem;
+}
+
+/* Information Section */
+
+.jumbo-2 {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1.5rem;
+}
+
+.author {
+  font-size: 0.7rem;
+  color: #000;
 }
