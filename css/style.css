@@ -133,7 +133,6 @@ header ul li {
 .author {
   font-size: 0.7rem;
   color: #000;
-  padding-top: 5rem;
 }
 
 .information {
@@ -176,4 +175,38 @@ header ul li {
 
 .more:hover {
   color: #E56346;
+}
+
+/* Jumbo-3 Section */
+
+.jumbo-3 {
+  background-color: #E5E5E5;
+  padding: 2rem 2.5rem;
+}
+
+.jumbo-3 h2 {
+  display: block;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.jumbo-center {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.learning {
+  background-color: #FFF;
+  margin: 2rem;
+  max-width: 27%;
+  overflow: hidden;
+}
+
+.learning .image{
+}
+
+.learning img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
