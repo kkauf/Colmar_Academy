@@ -9,6 +9,7 @@ html, body {
 .container {
   max-width: 1050px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .tablet,
@@ -142,12 +143,14 @@ nav {
 
 .jumbo-content {
   display: flex;
+  box-sizing: border-box;
 }
 
 .jumbo-header{
   display: block;
   text-align: center;
   margin: 0;
+  box-sizing: border-box;
 }
 
 @media only screen and (max-width: 775px){
@@ -228,6 +231,7 @@ nav {
 
 .jumbo-2 .jumbo-right {
   justify-content: flex-start;
+  margin-top: 1rem;
 }
 
 .author {
@@ -258,12 +262,9 @@ nav {
   display: block;
 }
 
-.jumbo-2 .information:last-child {
+.information:hover {
   background-color: #E5E5E5;
-}
-
-.jumbo-2 .information:first-child {
-  padding-top: 0;
+  transition: all 200ms ease-in-out 100ms;
 }
 
 .more {
@@ -275,15 +276,12 @@ nav {
 .more:hover,
 .more:active {
   color: #E56346;
+  padding-left: 1rem;
 }
 
 @media only screen and (max-width: 775px){
   .jumbo-2 .information:first-child {
     padding-top: 1rem;
-  }
-
-  .jumbo-2 .information:last-child {
-    background-color: #FFFFFF;
   }
 }
 
@@ -327,7 +325,8 @@ nav {
   background-color: #FFF;
   margin: 1rem;
   overflow: hidden;
-  max-width: 310px;
+  max-width: 280px;
+
 }
 
 .learning img {
@@ -342,10 +341,18 @@ nav {
   justify-content: center;
 }
 
-.learning-text span {
+.courses {
   text-transform: uppercase;
   font-weight: 300;
   padding-top: 0.5rem;
+  transition: all 300ms ease-in-out 100ms;
+}
+
+
+.courses:hover,
+.courses:active {
+  color: #E56346;
+  padding-left: 1rem;
 }
 
 .learning-text p {
@@ -366,6 +373,7 @@ nav {
   .jumbo-3 p {
     display: none;
   }
+
 
   .jumbo-center {
     display: block;
@@ -403,11 +411,6 @@ nav {
 
 .jumbo-4 .jumbo-right {
   justify-content: flex-start;
-}
-
-.jumbo-4 .information:first-child {
-  padding-top: 1rem;
-  background-color: #E5E5E5;
 }
 
 video {
