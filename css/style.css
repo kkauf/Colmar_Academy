@@ -11,13 +11,19 @@ html, body {
   margin: 0 auto;
 }
 
+.tablet,
+.mobile {
+  display: none;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   color: #616161;
 }
 
-h1, h2, p {
+h1, h2 {
   margin: 1rem 0;
+  line-height: 1.5;
 }
 
 h1 {
@@ -36,27 +42,23 @@ h3 {
   color: #474747;
   font-weight: 500;
   font-size: 1.2rem;
-  padding: 0.2rem 0;
 }
 
-p {
+p,
+footer li {
   font-weight: 400;
+  font-size: .8rem;
+  padding: 0.5rem 0;
+  line-height: 1.5;
 }
 
-.jumbo-left {
-  width: 60%;
-  margin: 2rem 1.5rem;
-}
-
-.jumbo-right {
-  display: flex;
-  flex-direction: column;
+span {
+  line-height: 1.5;
 }
 
 /* Header */
 
 header {
-  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,7 +66,7 @@ header {
 }
 
 .logo {
-  display: inline-flex;
+  display: flex;
   justify-content: flex-start;
   align-items: center;
   padding-left: 1.5rem;
@@ -80,20 +82,86 @@ header {
   color: #424242;
 }
 
-ul {
-  padding-right: 1.5rem;
-}
-
-header ul li {
+header ul.desktop li{
   display: inline;
   padding-left: 1rem
 }
+
+header ul.desktop li:last-child{
+  padding-right: 1.5rem;
+}
+
+@media only screen and (max-width: 775px){
+  .desktop {
+    display: none;
+  }
+
+ul.tablet  {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+nav {
+    width: 100%;
+  }
+
+ul.tablet li:first-child {
+  opacity: 0;
+}
+
+
+}
+
+
+/* Jumbos */
+
+.jumbo-left {
+  width: 60%;
+  margin: 2rem 1.5rem;
+}
+
+.jumbo-right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 2rem 0;
+}
+
+.jumbo-content {
+  display: flex;
+}
+
+.jumbo-header{
+  display: block;
+  text-align: center;
+  margin: 0;
+}
+
+@media only screen and (max-width: 775px){
+  .jumbo-content {
+    display: block;
+    width: 100%;
+  }
+
+  .jumbo-left {
+    width: 100%;
+    margin: 0;
+  }
+
+  .jumbo-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
 
 /* Jumbo-1 Section */
 
 .jumbo-1 {
   background-color: #E5E5E5;
-  display: flex;
 }
 
 .jumbo-left img {
@@ -103,7 +171,6 @@ header ul li {
 }
 
 .jumbo-1 .jumbo-right {
-  max-width: 40%;
   justify-content: center;
 }
 
@@ -117,20 +184,31 @@ header ul li {
   transition: all 300ms ease-in-out 100ms;
 }
 
-.start:hover {
+.start:hover,
+.start:active {
   background-color: #E56346;
+}
+
+@media only screen and (max-width: 775px){
+    .jumbo-right h1 {
+      margin: 2rem 1rem;
+    }
+
+    .jumbo-right h3 {
+      margin: 0 1rem;
+    }
+
+    .start {
+      width: 50%;
+      margin: 1.5rem auto 2rem auto;
+    }
 }
 
 /* Jumbo-2 Section */
 
-.jumbo-2 {
-  display: flex;
-}
 
 .jumbo-2 .jumbo-right {
-  max-width: 40%;
   justify-content: flex-start;
-  margin: 1rem 0;
 }
 
 .author {
@@ -149,15 +227,10 @@ header ul li {
 
 .information-text {
   width: 65%;
-  padding: 0 1rem;
+  padding-left: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.information-text p {
-  font-size: .8rem;
-  padding: 0.5rem 0;
 }
 
 .information img {
@@ -166,8 +239,12 @@ header ul li {
   display: block;
 }
 
-.information:last-child {
+.jumbo-2 .information:last-child {
   background-color: #E5E5E5;
+}
+
+.jumbo-2 .information:first-child {
+  padding-top: 0;
 }
 
 .more {
@@ -176,7 +253,8 @@ header ul li {
   transition: all 300ms ease-in-out 100ms;
 }
 
-.more:hover {
+.more:hover,
+.more:active {
   color: #E56346;
 }
 
@@ -185,14 +263,6 @@ header ul li {
 .jumbo-3 {
   background-color: #E5E5E5;
   padding: 2rem 2.5rem;
-}
-
-.jumbo-3 h2,
-.jumbo-4 h2 {
-  display: block;
-  text-align: center;
-  margin: 0;
-  margin-bottom: 1rem;
 }
 
 .jumbo-center {
@@ -223,7 +293,7 @@ header ul li {
 .learning-text span {
   text-transform: uppercase;
   font-weight: 300;
-  padding: 0.5rem 0;
+  padding-top: 0.5rem;
 }
 
 .learning-text p {
@@ -235,15 +305,49 @@ header ul li {
 /* Jumbo-4 Section */
 
 .jumbo-4 {
-  padding: 2rem 2.5rem;
+  padding: 2rem 0;
 }
 
-.jumbo-4 .image {
+.jumbo-4 .jumbo-left {
   width: 60%;
+}
+
+.jumbo-content .jumbo-left h3 {
+  margin-top: 1.5rem;
+}
+
+.jumbo-4 .jumbo-right {
+  justify-content: flex-start;
+}
+
+.jumbo-4 .information:first-child {
+  padding-top: 1rem;
+  background-color: #E5E5E5;
 }
 
 video {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+/* Footer Section */
+
+footer {
+  border-top: 1px solid #E5E5E5;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer p,
+footer ul li {
+  padding: 1rem;
 }
