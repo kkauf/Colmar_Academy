@@ -26,9 +26,6 @@ h1, h2 {
   line-height: 1.5;
 }
 
-h3{
-  line-height: 1.5;
-}
 
 h1 {
   color: #474747;
@@ -46,6 +43,7 @@ h3 {
   color: #474747;
   font-weight: 500;
   font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 p,
@@ -116,6 +114,15 @@ nav {
   }
 }
 
+@media only screen and (max-width: 500px){
+  header .logo {
+    display: none;
+  }
+
+  ul.tablet li:first-child {
+    opacity: 1;
+  }
+}
 
 /* Jumbos */
 
@@ -210,6 +217,12 @@ nav {
     }
 }
 
+@media only screen and (max-width: 500px){
+  .start {
+    width: 100%;
+  }
+}
+
 /* Jumbo-2 Section */
 
 
@@ -272,7 +285,29 @@ nav {
   .jumbo-2 .information:last-child {
     background-color: #FFFFFF;
   }
+}
 
+@media only screen and (max-width: 500px){
+  .information .image:first-child {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .information {
+    display: block;
+    padding-bottom: 0;
+  }
+
+  .information .image {
+    width: 100%;
+  }
+
+  .information-text {
+    padding: 2rem 1rem;
+  }
 }
 
 /* Jumbo-3 Section */
@@ -389,6 +424,20 @@ video {
   }
 }
 
+@media only screen and (max-width: 500px){
+  .jumbo-4 h3,
+  .jumbo-4 p {
+    display: none;
+  }
+
+  .jumbo-4 .jumbo-right{
+    display: none;
+  }
+
+  .jumbo-4 {
+    padding-bottom: 1.5rem;
+  }
+}
 /* Footer Section */
 
 footer {
@@ -408,4 +457,10 @@ footer ul {
 footer p,
 footer ul li {
   padding: 1rem;
+}
+
+@media only screen and (max-width: 500px){
+  footer ul {
+    display: none;
+  }
 }
