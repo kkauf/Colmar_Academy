@@ -26,6 +26,10 @@ h1, h2 {
   line-height: 1.5;
 }
 
+h3{
+  line-height: 1.5;
+}
+
 h1 {
   color: #474747;
   font-weight: 700;
@@ -102,15 +106,14 @@ ul.tablet  {
     align-items: center;
     width: 100%;
   }
+
 nav {
     width: 100%;
   }
 
-ul.tablet li:first-child {
-  opacity: 0;
-}
-
-
+  ul.tablet li:first-child {
+    opacity: 0;
+  }
 }
 
 
@@ -119,6 +122,7 @@ ul.tablet li:first-child {
 .jumbo-left {
   width: 60%;
   margin: 2rem 1.5rem;
+  box-sizing: border-box;
 }
 
 .jumbo-right {
@@ -126,6 +130,7 @@ ul.tablet li:first-child {
   flex-direction: column;
   width: 40%;
   margin: 2rem 0;
+  box-sizing: border-box;
 }
 
 .jumbo-content {
@@ -172,6 +177,7 @@ ul.tablet li:first-child {
 
 .jumbo-1 .jumbo-right {
   justify-content: center;
+  padding-right: 1rem;
 }
 
 .start {
@@ -190,12 +196,12 @@ ul.tablet li:first-child {
 }
 
 @media only screen and (max-width: 775px){
-    .jumbo-right h1 {
-      margin: 2rem 1rem;
+    .jumbo-1 .jumbo-right h1 {
+      margin: 2rem 0;
     }
 
-    .jumbo-right h3 {
-      margin: 0 1rem;
+    .jumbo-1 .jumbo-right {
+      padding: 1rem;
     }
 
     .start {
@@ -258,6 +264,17 @@ ul.tablet li:first-child {
   color: #E56346;
 }
 
+@media only screen and (max-width: 775px){
+  .jumbo-2 .information:first-child {
+    padding-top: 1rem;
+  }
+
+  .jumbo-2 .information:last-child {
+    background-color: #FFFFFF;
+  }
+
+}
+
 /* Jumbo-3 Section */
 
 .jumbo-3 {
@@ -302,14 +319,47 @@ ul.tablet li:first-child {
   font-weight: 300;
 }
 
+@media only screen and (max-width: 775px){
+
+  .jumbo-3 {
+    background-color: #FFFFFF;
+    padding: 2rem 0;
+  }
+
+  .jumbo-3 .image,
+  .jumbo-3 span,
+  .jumbo-3 p {
+    display: none;
+  }
+
+  .jumbo-center {
+    display: block;
+  }
+
+  .learning {
+    margin: 0.5rem 1rem;
+    max-width: 100%;
+  }
+
+  .jumbo-header {
+    padding-bottom: 1rem;
+  }
+
+  .learning-text {
+    padding: 0;
+  }
+
+  .jumbo-3 h3{
+    display: block;
+    padding: 1rem 0 1.5rem 1rem;
+    background-color: #E5E5E5;
+  }
+}
+
 /* Jumbo-4 Section */
 
 .jumbo-4 {
   padding: 2rem 0;
-}
-
-.jumbo-4 .jumbo-left {
-  width: 60%;
 }
 
 .jumbo-content .jumbo-left h3 {
@@ -329,6 +379,14 @@ video {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+@media only screen and (max-width: 775px){
+  .jumbo-4 .jumbo-left h3,
+  .jumbo-4 .jumbo-left p
+   {
+    padding: 1rem;
+  }
 }
 
 /* Footer Section */
